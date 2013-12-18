@@ -12,7 +12,7 @@ class CfgPatches {
 /*external*/class Mode_FullAuto;
 class CfgWeapons {
 	class Rifle_Long_Base_F;
-	class tb_lmg_minimi762 : Rifle_Long_Base_F {	
+	class tb_lmg_minimi_base : Rifle_Long_Base_F {	
 		aidispersioncoefx = 15;
 		aidispersioncoefy = 16;
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.794328, 1, 15};
@@ -33,7 +33,7 @@ class CfgWeapons {
 		dexterity = 100;
 		discretedistance[] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
 		discretedistanceinitindex = 3;
-		displayname = "FN Minimi 7.62";
+		displayname = "FN Minimi";
 		htmax = 600;
 		htmin = 1;
 		magazines[] = {"150Rnd_762x51_Box", "150Rnd_762x51_Box_Tracer","tb_150Rnd_762x51_Box_Tracer_Red"};
@@ -46,7 +46,7 @@ class CfgWeapons {
 		picture = "\tb_lmg_m249\Data\m249_iron_ca.paa";
 		reloadaction = "GestureReloadM200";
 		reloadmagazinesound[] = {"A3\sounds_f\weapons\zafir\zafir_reload", 0.446684, 1, 20};
-		scope = 2;
+		scope = 0;
 		tbody = 100;
 		type = 1;
 		uipicture = "\A3\weapons_f\data\UI\icon_mg_CA.paa";
@@ -54,8 +54,9 @@ class CfgWeapons {
 		class manual: Mode_FullAuto {
 			airateoffire = 0.1;
 			airateoffiredistance = 50;
-			begin1[] = {"A3\sounds_f\weapons\zafir\zafir_1a7", 1.25893, 1, 1200};
-			begin2[] = {"A3\sounds_f\weapons\zafir\zafir_2a7", 1.25893, 1, 1200};
+			begin1[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-1", 1.25893, 1, 1200};
+			begin2[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-2", 1.25893, 1, 1200};
+			begin3[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-3", 1.25893, 1, 1200};
 			closure1[] = {"A3\sounds_f\weapons\closure\sfx7", 1.12202, 1, 10};
 			closure2[] = {"A3\sounds_f\weapons\closure\sfx8", 1.12202, 1, 10};
 			dispersion = 0.0035;
@@ -70,7 +71,8 @@ class CfgWeapons {
 			recoilprone = "recoil_auto_prone_mk200";
 			reloadtime = 0.07;
 			showtoplayer = 1;
-			soundbegin[] = {"begin1", 0.5, "begin2", 0.5};
+			soundbegin[] = {"begin1", 0.333, "begin2", 0.333, "begin3", 0.333};
+			soundclosure[] = {"closure1", 0.5, "closure2", 0.5};
 			soundburst = 0;
 			soundcontinuous = 0;
 		};
@@ -134,9 +136,45 @@ class CfgWeapons {
 			minrangeprobab = 0.8;
 		};
 	};
+	class tb_lmg_minimi762 : tb_lmg_minimi_base {
+		descriptionshort = "Light machine gun <br/>Caliber: 7.62x51mm NATO";
+		displayname = "FN Minimi 7.62";
+		scope = 2;
+	};
+	class tb_lmg_minimi556 : tb_lmg_minimi_base {	
+		descriptionshort = "Light machine gun <br/>Caliber: 5.556x45mm NATO";
+		displayname = "FN Minimi";
+		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red"};
+		model = "\tb_lmg_m249\m249_556";
+		handanim[] = {"OFP2_ManSkeleton", "\tb_lmg_m249\data\anim\SCAR.rtm"};
+		scope = 2;
+		class WeaponSlotsInfo {
+			allowedslots[] = {901};
+			mass = 4;
+			class MuzzleSlot {};
+			class CowsSlot {
+				access = 1;
+				compatibleitems[] = {"optic_MRCO"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot {};
+		};	
+	};
+	
+	
+	
 };
 
+
+
+
+
+
+
 class CfgMagazines {
+	class 150Rnd_762x51_Box;
 	class 150Rnd_762x51_Box_Tracer;
 	class tb_150Rnd_762x51_Box_Tracer_Red: 150Rnd_762x51_Box_Tracer {
 		ammo = "B_762x51_Tracer_Red";
@@ -144,5 +182,34 @@ class CfgMagazines {
 		displayname = "7.62mm 150Rnd Tracer (Red) Box";
 		displaynameshort = "Tracer";
 		tracersevery = 1;
+	};
+	
+	class tb_100Rnd_556x45_box : 150Rnd_762x51_Box {
+		ammo = "B_556x45_Ball";
+		count = 100;
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100";
+		displayname = "5.56mm 100Rnd Box";
+		displaynameshort = "5.56mm 100Rnd Box";
+		tracersevery = 0;
+		lastroundstracer = 4;	
+	};
+	class tb_100Rnd_556x45_box_tracer_green : tb_100Rnd_556x45_box{
+		ammo = "B_556x45_Ball_Tracer_Green";
+		descriptionshort = "Caliber: 5.56x45 mm Tracer - Green<br/>Rounds: 100";
+		displayname = "5.56mm 100Rnd Tracer (Green) Box";
+		displaynameshort = "5.56mm 100Rnd Tracer (Green) Box";
+		tracersevery = 1;
+	};
+	class tb_100Rnd_556x45_box_tracer_yellow : tb_100Rnd_556x45_box_tracer_green {
+		ammo = "B_556x45_Ball_Tracer_Yellow";
+		descriptionshort = "Caliber: 5.56x45 mm Tracer - Yellow<br/>Rounds: 100";
+		displayname = "5.56mm 100Rnd Tracer (Yellow) Box";
+		displaynameshort = "Tracer";	
+	};
+	class tb_100Rnd_556x45_box_tracer_red : tb_100Rnd_556x45_box_tracer_green {
+		ammo = "B_556x45_Ball_Tracer_Red";
+		descriptionshort = "Caliber: 5.56x45 mm Tracer - Red<br/>Rounds: 100";
+		displayname = "5.56mm 100Rnd Tracer (Red) Box";
+		displaynameshort = "Tracer";	
 	};
 };
