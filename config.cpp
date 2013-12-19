@@ -13,6 +13,7 @@ class CfgPatches {
 class CfgWeapons {
 	class Rifle_Long_Base_F;
 	class tb_lmg_minimi_base : Rifle_Long_Base_F {	
+		tmr_autorest_deployable = 1;
 		aidispersioncoefx = 15;
 		aidispersioncoefy = 16;
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01", 0.794328, 1, 15};
