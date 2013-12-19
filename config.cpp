@@ -213,4 +213,6 @@ class CfgMagazines {
 		displayname = "5.56mm 100Rnd Tracer (Red) Box";
 		displaynameshort = "Tracer";	
 	};
+
+	
 };
