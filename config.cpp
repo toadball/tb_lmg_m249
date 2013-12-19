@@ -68,9 +68,12 @@ class CfgWeapons {
 			midrangeprobab = 0.7;
 			minrange = 0;
 			minrangeprobab = 0.9;
-			recoil = "recoil_auto_mk200";
-			recoilprone = "recoil_auto_prone_mk200";
-			reloadtime = 0.07;
+			recoil = "empty";
+			// recoil = "recoil_auto_mk200";
+			recoilprone = "empty";
+			// recoilprone = "recoil_auto_prone_mk200";
+			reloadtime = 0.1;
+			// reloadtime = 0.07;
 			showtoplayer = 1;
 			soundbegin[] = {"begin1", 0.333, "begin2", 0.333, "begin3", 0.333};
 			soundclosure[] = {"closure1", 0.5, "closure2", 0.5};
