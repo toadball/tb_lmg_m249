@@ -9,7 +9,7 @@ class CfgPatches {
 
 
 //handanim[] = {"OFP2_ManSkeleton", "\Ca\weapons_E\SCAR\Data\Anim\SCAR.rtm"};
-/*external*/class Mode_FullAuto;
+class Mode_FullAuto;
 class CfgWeapons {
 	class Rifle_Long_Base_F;
 	class tb_lmg_minimi_base : Rifle_Long_Base_F {	
