@@ -141,6 +141,25 @@ class CfgWeapons {
 		descriptionshort = "Light machine gun <br/>Caliber: 7.62x51mm NATO";
 		displayname = "FN Minimi 7.62";
 		scope = 2;
+		class WeaponSlotsInfo {
+			allowedslots[] = {901};
+			mass = 4;
+			class MuzzleSlot {};
+			class PointerSlot {
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
+			class CowsSlot {
+			    access = 1;
+				compatibleitems[] = {"optic_MRCO"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+		}
 	};
 	class tb_lmg_minimi556 : tb_lmg_minimi_base {	
 		descriptionshort = "Light machine gun <br/>Caliber: 5.556x45mm NATO";
@@ -153,14 +172,14 @@ class CfgWeapons {
 			allowedslots[] = {901};
 			mass = 4;
 			class MuzzleSlot {};
-			class CowsSlot {
+			class PointerSlot {
 				access = 1;
 				compatibleitems[] = {"acc_flashlight","acc_pointer_IR"};
 				displayname = "Pointer Slot";
-				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
 				scope = 0;
 			};
-			class PointerSlot {
+			class CowsSlot {
 			    access = 1;
 				compatibleitems[] = {"optic_MRCO"};
 				displayname = "Optics Slot";
