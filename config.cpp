@@ -247,7 +247,7 @@ class CfgWeapons {
 		displayname = "FN Minimi";
 		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red"};
 		model = "\tb_lmg_m249\m249_556";
-		handanim[] = {"OFP2_ManSkeleton", "\tb_lmg_m249\data\anim\SCAR.rtm"};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Machineguns\M200\data\Anim\M200.rtm"};
 		scope = 2;
 		class WeaponSlotsInfo {
 			allowedslots[] = {901};
