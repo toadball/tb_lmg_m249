@@ -155,12 +155,18 @@ class CfgWeapons {
 			class MuzzleSlot {};
 			class CowsSlot {
 				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+			class PointerSlot {
+			    access = 1;
 				compatibleitems[] = {"optic_MRCO"};
 				displayname = "Optics Slot";
 				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
 				scope = 0;
 			};
-			class PointerSlot {};
 		};	
 	};
 	
