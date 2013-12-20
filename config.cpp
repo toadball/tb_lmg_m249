@@ -148,7 +148,7 @@ class CfgWeapons {
 			};
 			class CowsSlot {
 			    access = 1;
-				compatibleitems[] = {"optic_Nightstalker", "optic_tws", "optic_tws_mg", "optic_NVS", "optic_SOS", "optic_MRCO", "optic_Arco", "optic_aco", "optic_ACO_grn", "optic_aco_smg", "optic_ACO_grn_smg", "optic_hamr", "optic_Holosight", "optic_Holosight_smg"};
+				compatibleItems[] = {"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg"};
 				displayname = "Optics Slot";
 				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
 				scope = 0;
