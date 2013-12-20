@@ -148,7 +148,7 @@ class CfgWeapons {
 			};
 			class CowsSlot {
 			    access = 1;
-				compatibleitems[] = {"optic_MRCO"};
+				compatibleitems[] = {"optic_Nightstalker", "optic_tws", "optic_tws_mg", "optic_NVS", "optic_SOS", "optic_MRCO", "optic_Arco", "optic_aco", "optic_ACO_grn", "optic_aco_smg", "optic_ACO_grn_smg", "optic_hamr", "optic_Holosight", "optic_Holosight_smg"};
 				displayname = "Optics Slot";
 				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
 				scope = 0;
@@ -247,7 +247,7 @@ class CfgWeapons {
 	class tb_lmg_minimi556 : tb_lmg_minimi_base {	
 		descriptionshort = "Light machine gun <br/>Caliber: 5.556x45mm NATO";
 		displayname = "FN Minimi";
-		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red"};
+		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 		model = "\tb_lmg_m249\m249_556";
 		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Machineguns\M200\data\Anim\M200.rtm"};
 		scope = 2;
