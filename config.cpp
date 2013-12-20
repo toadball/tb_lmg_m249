@@ -39,7 +39,6 @@ class CfgWeapons {
 		htmin = 1;
 		magazines[] = {"150Rnd_762x51_Box", "150Rnd_762x51_Box_Tracer","tb_150Rnd_762x51_Box_Tracer_Red"};
 		modelOptics = "-";
-		
 		mfact = 1;
 		mfmax = 0;
 		model = "\tb_lmg_m249\m249_762";
@@ -136,6 +135,25 @@ class CfgWeapons {
 			minrange = 400;
 			minrangeprobab = 0.8;
 		};
+		class WeaponSlotsInfo {
+			allowedslots[] = {901};
+			mass = 4;
+			class MuzzleSlot {};
+			class PointerSlot {
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
+			class CowsSlot {
+			    access = 1;
+				compatibleitems[] = {"optic_MRCO"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
+		};
 	};
 	class tb_lmg_minimi762 : tb_lmg_minimi_base {
 		descriptionshort = "Light machine gun <br/>Caliber: 7.62x51mm NATO";
@@ -222,25 +240,6 @@ class CfgWeapons {
 			minrangeprobab = 0.8;
 		};
 		scope = 2;
-		class WeaponSlotsInfo {
-			allowedslots[] = {901};
-			mass = 4;
-			class MuzzleSlot {};
-			class PointerSlot {
-				access = 1;
-				compatibleitems[] = {"acc_flashlight","acc_pointer_IR"};
-				displayname = "Pointer Slot";
-				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
-				scope = 0;
-			};
-			class CowsSlot {
-			    access = 1;
-				compatibleitems[] = {"optic_MRCO"};
-				displayname = "Optics Slot";
-				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				scope = 0;
-			};
-		}
 	};
 	class tb_lmg_minimi556 : tb_lmg_minimi_base {	
 		descriptionshort = "Light machine gun <br/>Caliber: 5.556x45mm NATO";
@@ -249,36 +248,8 @@ class CfgWeapons {
 		model = "\tb_lmg_m249\m249_556";
 		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Machineguns\M200\data\Anim\M200.rtm"};
 		scope = 2;
-		class WeaponSlotsInfo {
-			allowedslots[] = {901};
-			mass = 4;
-			class MuzzleSlot {};
-			class PointerSlot {
-				access = 1;
-				compatibleitems[] = {"acc_flashlight","acc_pointer_IR"};
-				displayname = "Pointer Slot";
-				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
-				scope = 0;
-			};
-			class CowsSlot {
-			    access = 1;
-				compatibleitems[] = {"optic_MRCO"};
-				displayname = "Optics Slot";
-				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				scope = 0;
-			};
-		};	
 	};
-	
-	
-	
 };
-
-
-
-
-
-
 
 class CfgMagazines {
 	class 150Rnd_762x51_Box;
@@ -290,7 +261,6 @@ class CfgMagazines {
 		displaynameshort = "Tracer";
 		tracersevery = 1;
 	};
-	
 	class tb_100Rnd_556x45_box : 150Rnd_762x51_Box {
 		ammo = "B_556x45_Ball";
 		count = 100;
@@ -319,6 +289,4 @@ class CfgMagazines {
 		displayname = "5.56mm 100Rnd Tracer (Red) Box";
 		displaynameshort = "Tracer";	
 	};
-
-	
 };
