@@ -137,7 +137,7 @@ class CfgWeapons {
 		};
 		class WeaponSlotsInfo {
 			allowedslots[] = {901};
-			mass = 4;
+			mass = 115;
 			class MuzzleSlot {};
 			class PointerSlot {
 				access = 1;
@@ -240,6 +240,9 @@ class CfgWeapons {
 			minrangeprobab = 0.8;
 		};
 		scope = 2;
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			mass = 130;
+		};
 	};
 	class tb_lmg_minimi556 : tb_lmg_minimi_base {	
 		descriptionshort = "Light machine gun <br/>Caliber: 5.556x45mm NATO";
