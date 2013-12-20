@@ -140,6 +140,87 @@ class CfgWeapons {
 	class tb_lmg_minimi762 : tb_lmg_minimi_base {
 		descriptionshort = "Light machine gun <br/>Caliber: 7.62x51mm NATO";
 		displayname = "FN Minimi 7.62";
+		class manual: Mode_FullAuto {
+			airateoffire = 0.1;
+			airateoffiredistance = 50;
+			begin1[] = {"A3\sounds_f\weapons\EBR\EBR_st_4", 1.12202, 1, 1200};
+			begin2[] = {"A3\sounds_f\weapons\EBR\EBR_st_5", 1.12202, 1, 1200};
+			begin3[] = {"A3\sounds_f\weapons\EBR\EBR_st_6", 1.12202, 1, 1200};
+			closure1[] = {"A3\sounds_f\weapons\closure\sfx7", 1.12202, 1, 10};
+			closure2[] = {"A3\sounds_f\weapons\closure\sfx8", 1.12202, 1, 10};
+			dispersion = 0.0035;
+			displayname = "Auto";
+			maxrange = "30+ random 20";
+			maxrangeprobab = 0.1;
+			midrange = 20;
+			midrangeprobab = 0.7;
+			minrange = 0;
+			minrangeprobab = 0.9;
+			recoil = "recoil_auto_mk200";
+			recoilprone = "recoil_auto_prone_mk200";
+			reloadtime = 0.07;
+			showtoplayer = 1;
+			soundbegin[] = {"begin1", 0.333, "begin2", 0.333, "begin3", 0.333};
+			soundclosure[] = {"closure1", 0.5, "closure2", 0.5};
+			soundburst = 0;
+			soundcontinuous = 0;
+		};
+		class close: manual {
+			airateoffire = 1;
+			airateoffiredistance = 200;
+			burst = "6+round random 4";
+			maxrange = "100+ random 50";
+			maxrangeprobab = 0.1;
+			midrange = "50+ random 50";
+			midrangeprobab = 0.7;
+			minrange = 30;
+			minrangeprobab = 0.8;
+			showtoplayer = 0;
+		};
+		class short: close {
+			airateoffire = 2;
+			airateoffiredistance = 600;
+			burst = "4+round random 6";
+			maxrange = "300+ random 50";
+			maxrangeprobab = 0.1;
+			midrange = "100+ random 50";
+			midrangeprobab = 0.7;
+			minrange = 50;
+			minrangeprobab = 0.8;
+		};
+		class medium: close {
+			airateoffire = 2;
+			airateoffiredistance = 600;
+			burst = "4+round random 4";
+			maxrange = "400+ random 50";
+			maxrangeprobab = 0.1;
+			midrange = "300+ random 50";
+			midrangeprobab = 0.7;
+			minrange = 100;
+			minrangeprobab = 0.8;
+		};
+		class far: close {
+			airateoffire = 3;
+			airateoffiredistance = 800;
+			burst = "2+round random 4";
+			maxrange = "600+ random 50";
+			maxrangeprobab = 0.1;
+			midrange = "500+ random 50";
+			midrangeprobab = 0.7;
+			minrange = 300;
+			minrangeprobab = 0.8;
+		};
+		class long: far {
+			airateoffire = 4;
+			airateoffiredistance = 1000;
+			burst = "8+round random 6";
+			maxrange = 800;
+			maxrangeprobab = 0.1;
+			midrange = "700+ random 50";
+			midrangeprobab = 0.2;
+			minrange = 400;
+			minrangeprobab = 0.8;
+		};
 		scope = 2;
 		class WeaponSlotsInfo {
 			allowedslots[] = {901};
