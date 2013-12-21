@@ -2,7 +2,7 @@ class CfgPatches {
 	class tb_lmg_m249	{
 		units[] = {};
 		weapons[] = {"tb_lmg_minimi","tb_lmg_mk23"};
-		requiredVe`rsion = 0.10;
+		requiredVersion = 0.10;
 		requiredAddons[] = {"A3_Weapons_F_beta"};
 	};
 };
