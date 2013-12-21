@@ -179,7 +179,7 @@ class CfgMagazines {
 		count = 100;
 		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100";
 		displayname = "5.56mm 100Rnd Box";
-		displaynameshort = "5.56mm 100Rnd Box";
+		displaynameshort = "";
 		tracersevery = 0;
 		lastroundstracer = 0;	
 		mass = 25;
