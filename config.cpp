@@ -8,7 +8,6 @@ class CfgPatches {
 };
 
 
-//handanim[] = {"OFP2_ManSkeleton", "\Ca\weapons_E\SCAR\Data\Anim\SCAR.rtm"};
 class Mode_FullAuto;
 class CfgWeapons {
 	class Rifle_Long_Base_F;
@@ -30,7 +29,7 @@ class CfgWeapons {
 		bullet9[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_01", 0.794328, 1, 15};
 		cursor = "mg";
 		cursoraim = "EmptyCursor";
-		descriptionshort = "Light machine gun <br/>Caliber: 5.556x45mm NATO";
+		descriptionshort = "Light machine gun <br/>Caliber: 5.56x45mm NATO";
 		dexterity = 100;
 		discretedistance[] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
 		discretedistanceinitindex = 3;
