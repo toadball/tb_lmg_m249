@@ -1,8 +1,8 @@
 class CfgPatches {
 	class tb_lmg_m249	{
 		units[] = {};
-		weapons[] = {"tb_lmg_minimi762"};
-		requiredVersion = 0.10;
+		weapons[] = {"tb_lmg_minimi","tb_lmg_mk23"};
+		requiredVe`rsion = 0.10;
 		requiredAddons[] = {"A3_Weapons_F_beta"};
 	};
 };
@@ -38,7 +38,7 @@ class CfgWeapons {
 		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Machineguns\M200\data\Anim\M200.rtm"};
 		htmax = 600;
 		htmin = 1;
-		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
+		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green", "tb_100Rnd_556x45_box_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red""tb_100Rnd_556x45_box_red",,"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 		modelOptics = "-";
 		mfact = 1;
 		mfmax = 0;
@@ -164,12 +164,16 @@ class CfgWeapons {
 		displayname = "Mk23 LMG";
 		model = "\tb_lmg_m249\mk23";
 		scope = 2;
+		class Library {
+			libtextdesc = "The Mk23 is the AAF's light machine gun. It is a variant of the FN Minimi, a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
+		};
 	};
 };
 
 class CfgMagazines {
 	class 150Rnd_762x51_Box;
 	class 150Rnd_762x51_Box_Tracer;
+	//1in4 Tracer
 	class tb_100Rnd_556x45_box : 150Rnd_762x51_Box {
 		ammo = "B_556x45_Ball";
 		count = 100;
@@ -178,9 +182,18 @@ class CfgMagazines {
 		displaynameshort = "5.56mm 100Rnd Box";
 		tracersevery = 0;
 		lastroundstracer = 4;	
-		mass = 30;
+		mass = 25;
 	};
-	class tb_100Rnd_556x45_box_tracer_green : tb_100Rnd_556x45_box{
+	class tb_100Rnd_556x45_box_green : tb_100Rnd_556x45_box {
+		ammo = "B_556x45_Ball_Tracer_Green";
+		tracersevery = 4;
+	};
+	class tb_100Rnd_556x45_box_red : tb_100Rnd_556x45_box {
+		ammo = "B_556x45_Ball_Tracer_Red";
+		tracersevery = 4;
+	};
+	//all Tracer
+	class tb_100Rnd_556x45_box_tracer_green : tb_100Rnd_556x45_box {
 		ammo = "B_556x45_Ball_Tracer_Green";
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Green<br/>Rounds: 100";
 		displayname = "5.56mm 100Rnd Tracer (Green) Box";
@@ -191,12 +204,12 @@ class CfgMagazines {
 		ammo = "B_556x45_Ball_Tracer_Yellow";
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Yellow<br/>Rounds: 100";
 		displayname = "5.56mm 100Rnd Tracer (Yellow) Box";
-		displaynameshort = "Tracer";	
+		displaynameshort = "5.56mm 100Rnd Tracer (Yellow) Box";	
 	};
 	class tb_100Rnd_556x45_box_tracer_red : tb_100Rnd_556x45_box_tracer_green {
 		ammo = "B_556x45_Ball_Tracer_Red";
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Red<br/>Rounds: 100";
 		displayname = "5.56mm 100Rnd Tracer (Red) Box";
-		displaynameshort = "Tracer";	
+		displaynameshort = "5.56mm 100Rnd Tracer (Red) Box";	
 	};
 };
