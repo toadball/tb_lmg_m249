@@ -173,43 +173,41 @@ class CfgWeapons {
 class CfgMagazines {
 	class 150Rnd_762x51_Box;
 	class 150Rnd_762x51_Box_Tracer;
-	//1in4 Tracer
+	//mixed belts
 	class tb_100Rnd_556x45_box : 150Rnd_762x51_Box {
 		ammo = "B_556x45_Ball";
 		count = 100;
-		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100";
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 in 4 Tracer (Yellow)";
 		displayname = "5.56mm 100Rnd Box";
 		displaynameshort = "5.56mm 100Rnd Box";
-		tracersevery = 0;
+		tracersevery = 4;
 		lastroundstracer = 4;	
 		mass = 25;
 	};
 	class tb_100Rnd_556x45_box_green : tb_100Rnd_556x45_box {
 		ammo = "B_556x45_Ball_Tracer_Green";
-		tracersevery = 4;
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 in 4 Tracer (Green)";
 	};
 	class tb_100Rnd_556x45_box_red : tb_100Rnd_556x45_box {
 		ammo = "B_556x45_Ball_Tracer_Red";
-		tracersevery = 4;
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 in 4 Tracer (Red)";
 	};
 	//all Tracer
 	class tb_100Rnd_556x45_box_tracer_green : tb_100Rnd_556x45_box {
 		ammo = "B_556x45_Ball_Tracer_Green";
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Green<br/>Rounds: 100";
 		displayname = "5.56mm 100Rnd Tracer (Green) Box";
-		displaynameshort = "5.56mm 100Rnd Tracer (Green) Box";
+		displaynameshort = "Tracer";
 		tracersevery = 1;
 	};
 	class tb_100Rnd_556x45_box_tracer_yellow : tb_100Rnd_556x45_box_tracer_green {
 		ammo = "B_556x45_Ball_Tracer_Yellow";
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Yellow<br/>Rounds: 100";
-		displayname = "5.56mm 100Rnd Tracer (Yellow) Box";
-		displaynameshort = "5.56mm 100Rnd Tracer (Yellow) Box";	
+		displayname = "5.56mm 100Rnd Tracer (Yellow) Box";	
 	};
 	class tb_100Rnd_556x45_box_tracer_red : tb_100Rnd_556x45_box_tracer_green {
 		ammo = "B_556x45_Ball_Tracer_Red";
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Red<br/>Rounds: 100";
-		displayname = "5.56mm 100Rnd Tracer (Red) Box";
-		displaynameshort = "5.56mm 100Rnd Tracer (Red) Box";	
+		displayname = "5.56mm 100Rnd Tracer (Red) Box";	
 	};
 };
