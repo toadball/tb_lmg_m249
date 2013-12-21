@@ -184,7 +184,30 @@ class CfgMagazines {
 		lastroundstracer = 0;	
 		mass = 25;
 	};
-
+	class tb_100Rnd_556x45_box_y : 150Rnd_762x51_Box {
+		ammo = "B_556x45_Ball";
+		count = 100;
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 Tracer (Yellow) every 4<br/>Last 4 Tracer";
+		displayname = "5.56mm 100Rnd Box";
+		displaynameshort = "5.56mm 100Rnd Box";
+		tracersevery = 4;
+		lastroundstracer = 4;	
+		mass = 25;
+	};
+	class tb_100Rnd_556x45_box_g : tb_100Rnd_556x45_box_y {
+		ammo = "B_556x45_Ball_Tracer_Green";
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 Tracer (Green) every 4<br/>Last 4 Tracer";
+	};
+	class tb_100Rnd_556x45_box_g : tb_100Rnd_556x45_box_y {
+		ammo = "B_556x45_Ball_Tracer_Green";
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 Tracer (Green) every 4<br/>Last 4 Tracer";
+	};	
+	class tb_100Rnd_556x45_box_r : tb_100Rnd_556x45_box_y {
+		ammo = "B_556x45_Ball_Tracer_Red";
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 Tracer (Red) every 4<br/>Last 4 Tracer";
+	};		
+	
+	
 	class tb_100Rnd_556x45_box_tracer_green : tb_100Rnd_556x45_box {
 		ammo = "B_556x45_Ball_Tracer_Green";
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Green<br/>Rounds: 100";
