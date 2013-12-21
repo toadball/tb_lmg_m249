@@ -38,7 +38,7 @@ class CfgWeapons {
 		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Machineguns\M200\data\Anim\M200.rtm"};
 		htmax = 600;
 		htmin = 1;
-		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green", "tb_100Rnd_556x45_box_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red""tb_100Rnd_556x45_box_red",,"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
+		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green", "tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 		modelOptics = "-";
 		mfact = 1;
 		mfmax = 0;
@@ -165,7 +165,7 @@ class CfgWeapons {
 		model = "\tb_lmg_m249\mk23";
 		scope = 2;
 		class Library {
-			libtextdesc = "The Mk23 is the AAF's light machine gun. It is a variant of the FN Minimi, a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
+			libtextdesc = "The Mk23 is the AAF light machine gun. It is a variant of the FN Minimi, a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
 		};
 	};
 };
@@ -173,26 +173,18 @@ class CfgWeapons {
 class CfgMagazines {
 	class 150Rnd_762x51_Box;
 	class 150Rnd_762x51_Box_Tracer;
-	//mixed belts
+
 	class tb_100Rnd_556x45_box : 150Rnd_762x51_Box {
 		ammo = "B_556x45_Ball";
 		count = 100;
-		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 in 4 Tracer (Yellow)";
+		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100";
 		displayname = "5.56mm 100Rnd Box";
 		displaynameshort = "5.56mm 100Rnd Box";
-		tracersevery = 4;
-		lastroundstracer = 4;	
+		tracersevery = 0;
+		lastroundstracer = 0;	
 		mass = 25;
 	};
-	class tb_100Rnd_556x45_box_green : tb_100Rnd_556x45_box {
-		ammo = "B_556x45_Ball_Tracer_Green";
-		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 in 4 Tracer (Green)";
-	};
-	class tb_100Rnd_556x45_box_red : tb_100Rnd_556x45_box {
-		ammo = "B_556x45_Ball_Tracer_Red";
-		descriptionshort = "Caliber: 5.56x45 mm<br/>Rounds: 100<br/>1 in 4 Tracer (Red)";
-	};
-	//all Tracer
+
 	class tb_100Rnd_556x45_box_tracer_green : tb_100Rnd_556x45_box {
 		ammo = "B_556x45_Ball_Tracer_Green";
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Green<br/>Rounds: 100";
