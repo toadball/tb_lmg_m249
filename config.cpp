@@ -30,18 +30,20 @@ class CfgWeapons {
 		bullet9[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_01", 0.794328, 1, 15};
 		cursor = "mg";
 		cursoraim = "EmptyCursor";
-		descriptionshort = "Light machine gun <br/>Caliber: 7.62x51mm NATO";
+		descriptionshort = "Light machine gun <br/>Caliber: 5.556x45mm NATO";
 		dexterity = 100;
 		discretedistance[] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
 		discretedistanceinitindex = 3;
 		displayname = "FN Minimi";
+		drysound[] = {"A3\sounds_f\weapons\other\dry1", 0.630957, 1, 30};
+		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Machineguns\M200\data\Anim\M200.rtm"};
 		htmax = 600;
 		htmin = 1;
-		magazines[] = {"150Rnd_762x51_Box", "150Rnd_762x51_Box_Tracer","tb_150Rnd_762x51_Box_Tracer_Red"};
+		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 		modelOptics = "-";
 		mfact = 1;
 		mfmax = 0;
-		model = "\tb_lmg_m249\m249_762";
+		model = "\tb_lmg_m249\m249_556";
 		modes[] = {"manual", "close", "short", "medium","long"};
 		picture = "\tb_lmg_m249\Data\m249_iron_ca.paa";
 		reloadaction = "GestureReloadM200";
@@ -51,113 +53,6 @@ class CfgWeapons {
 		type = 1;
 		uipicture = "\A3\weapons_f\data\UI\icon_mg_CA.paa";
 		weaponinfotype = "RscWeaponZeroing";
-		class manual: Mode_FullAuto {
-			airateoffire = 0.1;
-			airateoffiredistance = 50;
-			begin1[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-1", 1.25893, 1, 1200};
-			begin2[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-2", 1.25893, 1, 1200};
-			begin3[] = {"A3\sounds_f\weapons\mk20\mk20-st-full-3", 1.25893, 1, 1200};
-			closure1[] = {"A3\sounds_f\weapons\closure\sfx7", 1.12202, 1, 10};
-			closure2[] = {"A3\sounds_f\weapons\closure\sfx8", 1.12202, 1, 10};
-			dispersion = 0.0035;
-			displayname = "Auto";
-			maxrange = "30+ random 20";
-			maxrangeprobab = 0.1;
-			midrange = 20;
-			midrangeprobab = 0.7;
-			minrange = 0;
-			minrangeprobab = 0.9;
-			recoil = "recoil_auto_mk200";
-			recoilprone = "recoil_auto_prone_mk200";
-			reloadtime = 0.07;
-			showtoplayer = 1;
-			soundbegin[] = {"begin1", 0.333, "begin2", 0.333, "begin3", 0.333};
-			soundclosure[] = {"closure1", 0.5, "closure2", 0.5};
-			soundburst = 0;
-			soundcontinuous = 0;
-		};
-		class close: manual {
-			airateoffire = 1;
-			airateoffiredistance = 200;
-			burst = "6+round random 4";
-			maxrange = "100+ random 50";
-			maxrangeprobab = 0.1;
-			midrange = "50+ random 50";
-			midrangeprobab = 0.7;
-			minrange = 30;
-			minrangeprobab = 0.8;
-			showtoplayer = 0;
-		};
-		class short: close {
-			airateoffire = 2;
-			airateoffiredistance = 600;
-			burst = "4+round random 6";
-			maxrange = "300+ random 50";
-			maxrangeprobab = 0.1;
-			midrange = "100+ random 50";
-			midrangeprobab = 0.7;
-			minrange = 50;
-			minrangeprobab = 0.8;
-		};
-		class medium: close {
-			airateoffire = 2;
-			airateoffiredistance = 600;
-			burst = "4+round random 4";
-			maxrange = "400+ random 50";
-			maxrangeprobab = 0.1;
-			midrange = "300+ random 50";
-			midrangeprobab = 0.7;
-			minrange = 100;
-			minrangeprobab = 0.8;
-		};
-		class Library {
-			libtextdesc = "The FN Minimi is a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
-		};
-		class far: close {
-			airateoffire = 3;
-			airateoffiredistance = 800;
-			burst = "2+round random 4";
-			maxrange = "600+ random 50";
-			maxrangeprobab = 0.1;
-			midrange = "500+ random 50";
-			midrangeprobab = 0.7;
-			minrange = 300;
-			minrangeprobab = 0.8;
-		};
-		class long: far {
-			airateoffire = 4;
-			airateoffiredistance = 1000;
-			burst = "8+round random 6";
-			maxrange = 800;
-			maxrangeprobab = 0.1;
-			midrange = "700+ random 50";
-			midrangeprobab = 0.2;
-			minrange = 400;
-			minrangeprobab = 0.8;
-		};
-		class WeaponSlotsInfo {
-			allowedslots[] = {901};
-			mass = 115;
-			class MuzzleSlot {};
-			class PointerSlot {
-				access = 1;
-				compatibleitems[] = {"acc_flashlight","acc_pointer_IR"};
-				displayname = "Pointer Slot";
-				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
-				scope = 0;
-			};
-			class CowsSlot {
-			    access = 1;
-				compatibleItems[] = {"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg"};
-				displayname = "Optics Slot";
-				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				scope = 0;
-			};
-		};
-	};
-	class tb_lmg_minimi762 : tb_lmg_minimi_base {
-		descriptionshort = "Light machine gun <br/>Caliber: 7.62x51mm NATO";
-		displayname = "FN Minimi 7.62";
 		class manual: Mode_FullAuto {
 			airateoffire = 0.1;
 			airateoffiredistance = 50;
@@ -239,17 +134,36 @@ class CfgWeapons {
 			minrange = 400;
 			minrangeprobab = 0.8;
 		};
-		scope = 2;
-		class WeaponSlotsInfo: WeaponSlotsInfo {
-			mass = 130;
+		class Library {
+			libtextdesc = "The FN Minimi is a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
+		};
+
+		class WeaponSlotsInfo {
+			allowedslots[] = {901};
+			mass = 115;
+			class MuzzleSlot {};
+			class PointerSlot {
+				access = 1;
+				compatibleitems[] = {"acc_flashlight","acc_pointer_IR"};
+				displayname = "Pointer Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				scope = 0;
+			};
+			class CowsSlot {
+			    access = 1;
+				compatibleItems[] = {"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
 		};
 	};
-	class tb_lmg_minimi556 : tb_lmg_minimi_base {	
-		descriptionshort = "Light machine gun <br/>Caliber: 5.556x45mm NATO";
-		displayname = "FN Minimi";
-		magazines[] = {"tb_100Rnd_556x45_box", "tb_100Rnd_556x45_box_tracer_green","tb_100Rnd_556x45_box_tracer_yellow","tb_100Rnd_556x45_box_tracer_red","30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
-		model = "\tb_lmg_m249\m249_556";
-		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Machineguns\M200\data\Anim\M200.rtm"};
+	class tb_lmg_minimi : tb_lmg_minimi_base {	
+		scope = 2;
+	};
+	class tb_lmg_mk23 : tb_lmg_minimi_base {
+		displayname = "Mk23 LMG";
+		model = "\tb_lmg_m249\mk23";
 		scope = 2;
 	};
 };
@@ -257,13 +171,6 @@ class CfgWeapons {
 class CfgMagazines {
 	class 150Rnd_762x51_Box;
 	class 150Rnd_762x51_Box_Tracer;
-	class tb_150Rnd_762x51_Box_Tracer_Red: 150Rnd_762x51_Box_Tracer {
-		ammo = "B_762x51_Tracer_Red";
-		descriptionshort = "Caliber: 7.62x51 mm Tracer - Red<br/>Rounds: 150";
-		displayname = "7.62mm 150Rnd Tracer (Red) Box";
-		displaynameshort = "Tracer";
-		tracersevery = 1;
-	};
 	class tb_100Rnd_556x45_box : 150Rnd_762x51_Box {
 		ammo = "B_556x45_Ball";
 		count = 100;
@@ -272,6 +179,7 @@ class CfgMagazines {
 		displaynameshort = "5.56mm 100Rnd Box";
 		tracersevery = 0;
 		lastroundstracer = 4;	
+		mass = 30;
 	};
 	class tb_100Rnd_556x45_box_tracer_green : tb_100Rnd_556x45_box{
 		ammo = "B_556x45_Ball_Tracer_Green";
