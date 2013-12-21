@@ -31,8 +31,8 @@ class CfgWeapons {
 		cursoraim = "EmptyCursor";
 		descriptionshort = "Light machine gun <br/>Caliber: 5.56x45mm NATO";
 		dexterity = 100;
-		discretedistance[] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
-		discretedistanceinitindex = 3;
+		discretedistance[] = {300, 400, 500, 600, 700, 800, 900, 1000};
+		discretedistanceinitindex = 0;
 		displayname = "FN Minimi";
 		drysound[] = {"A3\sounds_f\weapons\other\dry1", 0.630957, 1, 30};
 		handAnim[] = {"OFP2_ManSkeleton","\A3\weapons_f\Machineguns\M200\data\Anim\M200.rtm"};
