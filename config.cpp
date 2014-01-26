@@ -168,6 +168,17 @@ class CfgWeapons {
 			libtextdesc = "The Mk23 is the AAF light machine gun. It is a variant of the FN Minimi, a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
 		};
 	};
+	
+	class tb_lmg_mk24 : tb_lmg_minimi_base {
+		displayname = "Mk24 LMG";
+		model = "\tb_lmg_m249\mk24";
+		scope = 2;
+		magazines[] = {150Rnd_762x51_Box, 150Rnd_762x51_Box_Tracer };
+		class Library {
+			libtextdesc = "The Mk24 a variant of the FN Minimi re-chambered in 7.62mm NATO, a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
+		};	
+		handAnim[] = {"OFP2_ManSkeleton","tb_lmg_m249\data\anim\Mk48.rtm"};
+	};
 };
 
 class CfgMagazines {
