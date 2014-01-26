@@ -163,6 +163,7 @@ class CfgWeapons {
 	class tb_lmg_mk23 : tb_lmg_minimi_base {
 		displayname = "Mk23 LMG";
 		model = "\tb_lmg_m249\mk23";
+		picture = "\tb_lmg_m249\Data\w_mk23_ca.paa";
 		scope = 2;
 		class Library {
 			libtextdesc = "The Mk23 is the AAF light machine gun. It is a variant of the FN Minimi, a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
@@ -171,9 +172,10 @@ class CfgWeapons {
 	
 	class tb_lmg_mk24 : tb_lmg_minimi_base {
 		displayname = "Mk24 LMG";
+		picture = "\tb_lmg_m249\Data\w_mk24_ca.paa";
 		model = "\tb_lmg_m249\mk24";
 		scope = 2;
-		magazines[] = {150Rnd_762x51_Box, 150Rnd_762x51_Box_Tracer };
+		magazines[] = {150Rnd_762x51_Box, 150Rnd_762x51_Box_Tracer, tb_150Rnd_762x51_Box_Tracer_green, tb_150Rnd_762x51_Box_Tracer_yellow, tb_150Rnd_762x51_Box_Tracer_red};
 		class Library {
 			libtextdesc = "The Mk24 a variant of the FN Minimi re-chambered in 7.62mm NATO, a fully-automatic, gas-operated, magazine or belt-fed individual weapon. <br/>The FN Minimi provides the section with the accurate and sustained fire required to suppress and destroy enemy targets.";
 		};	
@@ -213,4 +215,29 @@ class CfgMagazines {
 		descriptionshort = "Caliber: 5.56x45 mm Tracer - Red<br/>Rounds: 100<br/>1 Tracer every 4<br/>Last 4 Tracer";
 		displayname = "5.56mm 100Rnd Tracer (Red) Box";	
 	};
+	class tb_150Rnd_762x51_Box_Tracer_green : 150Rnd_762x51_Box_Tracer {
+		ammo = "B_762x51_Tracer_Green";
+		descriptionshort = "Caliber: 7.62x51 mm<br/>Rounds: 150<br/>1 Tracer every 4<br/>Last 4 Tracer";
+		displayname = "7.62mm 150Rnd Tracer (Green) Box";		
+	};
+	class tb_150Rnd_762x51_Box_Tracer_yellow : 150Rnd_762x51_Box_Tracer {
+		ammo = "tb_B_762x51_Tracer_Yellow";
+		descriptionshort = "Caliber: 7.62x51 mm<br/>Rounds: 150<br/>1 Tracer every 4<br/>Last 4 Tracer";
+		displayname = "7.62mm 150Rnd Tracer (Yellow) Box";		
+	};	
+	class tb_150Rnd_762x51_Box_Tracer_red : 150Rnd_762x51_Box_Tracer {
+		ammo = "B_762x51_Tracer_Red";
+		descriptionshort = "Caliber: 7.62x51 mm<br/>Rounds: 150<br/>1 Tracer every 4<br/>Last 4 Tracer";
+		displayname = "7.62mm 150Rnd Tracer (Red) Box";		
+	};	
 };
+
+
+#ifndef TB_M134AMMO
+class CfgAmmo {
+	class B_762x51_Ball;
+	class tb_B_762x51_Tracer_Yellow : B_762x51_Ball {
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
+	};
+};
+#endif
