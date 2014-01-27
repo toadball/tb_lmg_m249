@@ -218,14 +218,16 @@ class CfgMagazines {
 	class tb_150Rnd_762x51_Box_Tracer_green : 150Rnd_762x51_Box_Tracer {
 		ammo = "B_762x51_Tracer_Green";
 		descriptionshort = "Caliber: 7.62x51 mm<br/>Rounds: 150<br/>1 Tracer every 4<br/>Last 4 Tracer";
-		displayname = "7.62mm 150Rnd Tracer (Green) Box";		
+		displayname = "7.62mm 150Rnd Tracer (Green) Box";	
+		tracersevery = 4;
+		lastroundstracer = 4;			
 	};
-	class tb_150Rnd_762x51_Box_Tracer_yellow : 150Rnd_762x51_Box_Tracer {
+	class tb_150Rnd_762x51_Box_Tracer_yellow : tb_150Rnd_762x51_Box_Tracer_green {
 		ammo = "tb_B_762x51_Tracer_Yellow";
 		descriptionshort = "Caliber: 7.62x51 mm<br/>Rounds: 150<br/>1 Tracer every 4<br/>Last 4 Tracer";
 		displayname = "7.62mm 150Rnd Tracer (Yellow) Box";		
 	};	
-	class tb_150Rnd_762x51_Box_Tracer_red : 150Rnd_762x51_Box_Tracer {
+	class tb_150Rnd_762x51_Box_Tracer_red : tb_150Rnd_762x51_Box_Tracer_green {
 		ammo = "B_762x51_Tracer_Red";
 		descriptionshort = "Caliber: 7.62x51 mm<br/>Rounds: 150<br/>1 Tracer every 4<br/>Last 4 Tracer";
 		displayname = "7.62mm 150Rnd Tracer (Red) Box";		
